@@ -1,0 +1,12 @@
+version: '2.1'
+services:
+  mongo:
+    image: "mongo:3.6"
+    expose:
+    - 27017
+    ports:
+    - "27017:27017"
+    volumes:
+    - ../db/ocr/main:/data/db
+    - ../db/ocr/logs:/data/configdb
+    restart: always
